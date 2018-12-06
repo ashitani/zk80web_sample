@@ -22,7 +22,7 @@ ldir
 halt
 
 hello_txt:
-defb 0x76,0x79,0x38,0x38,0x3f,0x00,0x00
+defb 0x76,0x79,0x38,0x38,0x3f,0x00,0x00,0x00
 ```
 
 0x83f8は7SEGのバッファで、ここに7SEGの点灯パターンを書き込めば任意のパターンを表示できるそうです。その他、[try's pageさんのTK-80のページ](http://www.st.rim.or.jp/~nkomatsu/evakit/TK80.html)や[ND80Kのマニュアル](http://userweb.alles.or.jp/chunichidenko/nd3setumeisyo/nd3_toriatukai.pdf)などが参考になります。
