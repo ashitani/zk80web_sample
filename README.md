@@ -1,6 +1,6 @@
 # zk80web_sample
 
-[zk-80 web(TK80クローン)](http://hp.vector.co.jp/authors/VA016157/zk80web04/zk80web.html)
+[zk-80 web(TK80エミュレータ)](http://hp.vector.co.jp/authors/VA016157/zk80web04/zk80web.html)
 のサンプルプログラムとビルドスクリプトです。
 
 zk-80 webの使い方は[こちら](http://hp.vector.co.jp/authors/VA016157/zk80web04/help/)。
@@ -25,7 +25,7 @@ hello_txt:
 defb 0x76,0x79,0x38,0x38,0x3f,0x00,0x00,0x00
 ```
 
-0x83f8は7SEGのバッファで、ここに7SEGの点灯パターンを書き込めば任意のパターンを表示できるそうです。その他、[try's pageさんのTK-80のページ](http://www.st.rim.or.jp/~nkomatsu/evakit/TK80.html)や[ND80Kのマニュアル](http://userweb.alles.or.jp/chunichidenko/nd3setumeisyo/nd3_toriatukai.pdf)などが参考になります。
+0x83f8は7SEGのバッファで、ここに7SEGの点灯パターンを書き込めば任意のパターンを表示できるそうです。[try's pageさんのTK-80のページ](http://www.st.rim.or.jp/~nkomatsu/evakit/TK80.html)などが参考になります。
 
 # ビルド
 
@@ -45,3 +45,9 @@ hello.binができます。冒頭にリトルエンディアンで開始アド�
 - [RUN]を押す
 
 ![screenshot](./image/screenshot.png)
+
+# 補足
+
+オリジナルのTK80のCPUは8080Aですが、zk-80はZ80エミュレータがベースなようです。Z80は8080の上位互換なので、律儀な人は8080互換命令だけでプログラムを組むといいでしょう。
+
+なお、ここのサンプルプログラムで使ったブロック転送命令ldirは8080にはなくZ80で追加された命令なのでオリジナルTK80では動かないと思われます。
