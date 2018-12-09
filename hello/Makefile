@@ -7,7 +7,7 @@ all: $(TARGETS)
 .SUFFIXES: .asm .bin
 .asm.bin:
 	$(ASM) $(FLAGS) $<
-	python insert_addr.py $@ 0x8000
+	python ../tools/insert_addr.py $@ 0x8000
 
 .PHONY: clean run
 clean:
